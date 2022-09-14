@@ -1,23 +1,23 @@
+# https://leetcode.com/problems/invert-binary-tree/
+
 import unittest
 
 class Test(unittest.TestCase):
 
-    def lowestCommonAncestor(self, root, p, q):
-        cur = root
-        while cur:
-            if p.val > cur.val and p.val > cur.val:
-                cur = cur.right
-            elif p.val < cur.val and q.val < cur.val:
-                cur = cur.left
-            else:
-                return cur
+    def invertTree(self, root):
+        if not root:
+            return None
+        root.left, root.right = root.right, root.left
+        self.invertTree(root.left)
+        self.invertTree(root.right)
+        return root
 
     def test_first(self):
-        self.assertEqual(self.lowestCommonAncestor([6,2,8,0,4,7,9,null,null,3,5], 2, 4), 2)
+        self.assertEqual(self.lowestCommonAncestor([2,1,3]), [2,3,1])
     
     def test_second(self):
-        self.assertEqual(self.lowestCommonAncestor([2,1], 2, 1), 2)
+        self.assertEqual(self.lowestCommonAncestor([]), [])
 
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     unittest.main()
