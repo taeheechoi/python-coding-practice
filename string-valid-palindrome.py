@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/valid-palindrome/
+# T: O(n) S: O(1) the amount of memory that you use is constant and does not depends on the data that it is processing
 import unittest
 
 class Test(unittest.TestCase):

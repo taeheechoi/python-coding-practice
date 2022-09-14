@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/binary-search/
+# T: O(log n) S: O(1)
 import unittest
 
 class Test(unittest.TestCase):
