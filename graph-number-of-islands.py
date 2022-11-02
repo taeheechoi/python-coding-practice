@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/number-of-islands/
+# Time O(m*n) Space O(1)
 
 import unittest
 from collections import deque
